@@ -66,17 +66,16 @@ The playbook automates these tasks:
         state: enabled
 
 
-How to Run the Project
+*How to Run the Project*
 Clone the repository:
 
 git clone https://github.com/rhysandofvelaris/ansible-apache-project.git
 cd ansible-apache-project
-Run the playbook:
+*Run the playbook:*
 
 ansible-playbook -i hosts.ini install_apache.yml
-Verify the Installation:
+*Verify the Installation:*
 
-Open your web browser and go to:
-vbnet
+*Open your web browser and go to:*
 http://<your-instance-public-ip>
-You should see Hello, World! displayed.
+**You should see Hello, World! displayed.**
