@@ -1,0 +1,25 @@
+---
+- hosts: webserver
+  become: yes
+  tasks:
+    - name: Ensure Apache is installed
+      yum:
+        name: httpd
+        state: present
+
+    - name: Start and enable Apache service
+      service:
+        name: httpd
+        state: started
+        enabled: true
+
+    - name: Create a simple HTML file
+      copy:
+        dest: /var/www/html/index.html
+        content: |
+          <html>
+            <head><title>Welcome</title></head>
+            <body>
+              <h1>Hello from Ansible Automation!</h1>
+            </body>
+          </html>
